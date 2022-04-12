@@ -1,0 +1,8 @@
+{
+  "name": "coaktionproject",
+  "version": "1.0.0",
+  "description": "Projeto criado para a Co.Aktion",
+  "main": "index.js",
+  "author": "Jessica Lima <jessikurt@gmail.com>",
+  "license": "MIT"
+}
