@@ -319,8 +319,6 @@ body {
   padding: 2rem 0;
 }
 
-
-
 .about {
   background-color: #222222;
 }
@@ -354,10 +352,7 @@ body {
   flex-direction: column;
 }
 
-
-
 /*---teste de media----*/
-
 
 /*-----COMEÇA O MEDIA QUERY-----*/
 
@@ -402,7 +397,6 @@ body {
   .links a img {
     width: 2.3rem;
   }
-
   /*--- MENU ---*/
   .menu {
     margin: 0.5rem 0;
@@ -427,7 +421,6 @@ body {
     padding: 1rem 0 0 0;
   }
   /*--- VIDEOS ---*/
-
   .videos ul {
     width: 90%;
   }
@@ -435,7 +428,13 @@ body {
   .videos ul li:nth-child(3) {
     display: none;
   }
-
+  /*--- FORM ---*/
+  .data-form {
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+  }
   /*--- FOOTER ---*/
   .footer {
     background-color: #222222;
@@ -454,7 +453,7 @@ body {
   .attendance {
     width: 100%;
     font-weight: 100;
-    padding: .5rem 0 0 0rem;
+    padding: 0.5rem 0 0 0rem;
     display: flex;
     justify-content: space-around;
   }
@@ -492,15 +491,14 @@ body {
     flex-direction: column;
   }
   .attendance ul li {
-    padding: .5rem 0;
+    padding: 0.5rem 0;
   }
 }
 
 /*---------- ACABA O MEDIA QUERY ---------------*/
 
 @media screen and (max-width: 768px) {
-  .hero,
-  .form {
+  .hero {
     display: none;
   }
 }
@@ -509,6 +507,6 @@ body {
   .products span,
   .about span,
   .support span {
-    display:none;
+    display: none;
   }
 }
