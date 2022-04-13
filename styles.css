@@ -376,6 +376,10 @@ body {
   .header span {
     display: none;
   }
+
+  .default {
+    display: none;
+  }
   .container {
     width: 90%;
     display: flex;
@@ -397,6 +401,39 @@ body {
   .links a img {
     width: 2.3rem;
   }
+  /*--- search ---*/
+
+
+  .search {
+    height: 3.5rem;
+    background-color: #00aae2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5rem 0;
+  }
+
+  .search button {
+    width: 20%;
+    background: #ffffff;
+    border: 1px solid #00aae2;
+    border-radius: 0px 2px 2px 0px;
+    padding: .25rem 1rem;
+  }
+
+  .search input {
+    border: 1px solid #00aae2;
+    display: flex;
+    border-radius: 2px 0px 0px 2px;
+    padding: .6rem;
+    width: 80%;
+  }
+
+  .search div {
+    display: flex;
+    width: 90%;
+  }
+
   /*--- MENU ---*/
   .menu {
     margin: 0.5rem 0;
@@ -503,10 +540,13 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 770px) {
   .products span,
   .about span,
   .support span {
+    display: none;
+  }
+  .busca {
     display: none;
   }
 }
