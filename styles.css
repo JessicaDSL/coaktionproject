@@ -169,7 +169,7 @@ body {
   margin: 0 0 2rem 0;
 }
 
-.dadospessoais {
+.data-form {
   width: 55%;
   display: grid;
   grid-template-columns: 1fr 1fr;
