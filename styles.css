@@ -90,6 +90,51 @@ body {
   padding: 0 0 0 0.3rem;
 }
 
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .header ul {
+    display: none;
+  }
+  .header img {
+    display: flex;
+    width: 3rem;
+  }
+  .header hr {
+    display: none;
+  }
+  .header span {
+    display: none;
+  }
+
+  .container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .container img {
+    width: 7rem;
+    margin: 0;
+  }
+  .container a {
+    padding: 0;
+  }
+
+  .nav {
+    padding: 0;
+  }
+
+  .links {
+    display: flex;
+  }
+  .links a img {
+    width: 2.3rem;
+  }
+}
+
 /*--- HERO ---*/
 
 .hero img {
@@ -350,4 +395,20 @@ body {
 .attendance ul li {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero,
+  .menu,
+  .videos,
+  .form,
+  .footer {
+    display: none;
+  }
 }
