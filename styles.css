@@ -11,8 +11,8 @@
 }
 
 @font-face {
-  font-family: Muli-Bold;
-  src: url("./assets/fonts/Muli-Bold.ttf");
+  font-family: Mulish-Bold;
+  src: url("./assets/fonts/Mulish-Bold.ttf");
 }
 
 button {
@@ -82,6 +82,61 @@ body {
 .menu ul li button img {
   width: 10%;
 }
+
+
+/*--- FORM ---*/
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #626366;
+  margin: 4rem 0;
+}
+
+.form input {
+  border: 1px solid #e2e2e2;
+  padding: .2rem 0;
+}
+
+.form label {
+  font-size: .65rem;
+  padding: 0 0 .4rem 0;
+}
+
+.form h1 {
+  color: #626366;
+  font-size: 1.875rem;
+  margin: 0 0 2rem 0;
+}
+
+.dadospessoais {
+  width: 55%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.form button {
+  background: none;
+  border: 1.2px solid #00aae2;
+  color: #00aae2;
+  font-family: Mulish-Bold;
+  padding: .8rem 1.4rem;
+  margin: 1.8rem 0;
+}
+
+.gridsize {
+  display: flex;
+}
+
 
 /*--- FOOTER ---*/
 
