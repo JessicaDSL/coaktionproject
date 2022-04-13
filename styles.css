@@ -4,6 +4,17 @@
   box-sizing: border-box;
   outline: 0;
 }
+
+@font-face {
+  font-family: Mulish-Regular;
+  src: url('./assets/fonts/Mulish-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Muli-Bold;
+  src: url('./assets/fonts/Muli-Bold.ttf');
+}
+
 button {
   cursor: pointer;
 }
@@ -15,4 +26,72 @@ ul {
 }
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Mulish-Regular';
+  width: 100%;
+}
+
+/*footer */
+
+.footer {
+  background-color: #686868;
+  color: #ffffff;
+  font-size: .5rem;
+  font-weight: 100;
+  display: flex;
+}
+
+
+
+.footer h1 {
+  font-size: .6rem;
+  font-weight: 500;
+  margin: 0 0 .55rem 0;
+}
+
+.footer ul li {
+  padding: .4rem 0;
+}
+
+.contact {
+  width: 26%;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.about {
+  background-color: #222222;
+}
+
+.products {
+  background-color: #383838;
+}
+
+.products, .about, .support {
+  width: 16%;
+  font-weight: 100;
+  padding: 3rem 0 3rem .8rem;
+}
+
+.support {
+  width: 14%;
+  background-color: #565656;
+}
+
+.attendance {
+  width: 26%;
+  background-color: #686868;
+  font-weight: 100;
+  padding: 3rem 0 3rem .8rem;
+}
+
+.attendance ul li {
+  display: flex;
+  flex-direction: column;
+  
 }
