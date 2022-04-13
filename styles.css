@@ -95,6 +95,7 @@ body {
   width: 100%;
 }
 
+
 /*--- MENU ---*/
 
 
@@ -145,6 +146,78 @@ body {
 .menu ul li button img {
   width: 10%;
 }
+
+
+
+/*--- VIDEOS ---*/
+
+
+.videos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.videos h1 {
+  color: #626366;
+  font-size: 1.875rem;
+  margin: 1rem 0 1rem 0;
+}
+
+.arrow img {
+  width: .4rem;
+  margin: 0 .5rem;
+}
+
+.content {
+  display: flex;
+}
+
+.videos ul {
+  display: flex;
+  width: 60%;
+}
+
+.videos ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5.8rem;
+  border: 1px solid #e2e2e2;
+  margin: 0 1rem;
+}
+
+.videos ul li img {
+  width: 30%;
+}
+
+.carousel {
+  margin: 2rem 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.balls {
+  display: flex;
+}
+
+.content {
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  border: 1px solid #e2e2e2;
+  margin: 0 .1rem;
+}
+
+.content:first-child {
+  background-color: #00aae2;
+  border: 1px solid #e2e2e2;
+}
+
 
 
 /*--- FORM ---*/
