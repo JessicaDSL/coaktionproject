@@ -7,12 +7,12 @@
 
 @font-face {
   font-family: Mulish-Regular;
-  src: url('./assets/fonts/Mulish-Regular.ttf') format('truetype');
+  src: url("./assets/fonts/Mulish-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: Muli-Bold;
-  src: url('./assets/fonts/Muli-Bold.ttf');
+  src: url("./assets/fonts/Muli-Bold.ttf");
 }
 
 button {
@@ -29,30 +29,78 @@ html {
 }
 
 body {
-  font-family: 'Mulish-Regular';
+  font-family: "Mulish-Regular";
   width: 100%;
 }
 
-/*footer */
+/*--- MENU ---*/
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 9rem 9rem;
+  grid-gap: 1rem;
+  color: #626366;
+}
+
+.menu ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #e2e2e2;
+}
+
+.menu ul li img {
+  width: 50%;
+  padding: 0.7rem 0 0 0;
+}
+
+.menu ul li h2 {
+  font-size: 0.5rem;
+  width: 99%;
+  text-align: center;
+}
+
+.menu button {
+  background: none;
+  border: none;
+  color: #626366;
+  font-size: 0.5rem;
+  font-weight: 500;
+  padding: 0 0 0.7rem 0;
+}
+
+.menu ul li button img {
+  width: 10%;
+}
+
+/*--- FOOTER ---*/
 
 .footer {
   background-color: #686868;
   color: #ffffff;
-  font-size: .5rem;
+  font-size: 0.5rem;
   font-weight: 100;
   display: flex;
 }
 
-
-
 .footer h1 {
-  font-size: .6rem;
+  font-size: 0.6rem;
   font-weight: 500;
-  margin: 0 0 .55rem 0;
+  margin: 0 0 0.55rem 0;
 }
 
 .footer ul li {
-  padding: .4rem 0;
+  padding: 0.4rem 0;
 }
 
 .contact {
@@ -63,7 +111,6 @@ body {
   align-items: center;
 }
 
-
 .about {
   background-color: #222222;
 }
@@ -72,10 +119,12 @@ body {
   background-color: #383838;
 }
 
-.products, .about, .support {
+.products,
+.about,
+.support {
   width: 16%;
   font-weight: 100;
-  padding: 3rem 0 3rem .8rem;
+  padding: 3rem 0 3rem 0.8rem;
 }
 
 .support {
@@ -87,11 +136,10 @@ body {
   width: 26%;
   background-color: #686868;
   font-weight: 100;
-  padding: 3rem 0 3rem .8rem;
+  padding: 3rem 0 3rem 0.8rem;
 }
 
 .attendance ul li {
   display: flex;
   flex-direction: column;
-  
 }
