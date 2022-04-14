@@ -180,7 +180,7 @@ body {
 }
 
 .menu ul li {
-  height: 14rem;
+  height: 12rem;
   width: 38.5%;
   padding: 0 1rem;
   margin: 1rem;
@@ -195,6 +195,7 @@ body {
 .item-menu h2 {
   font-size: 0.938rem;
   font-family: Mulish-Bold;
+  padding: .3rem 0;
 }
 
 .item-menu button {
@@ -208,7 +209,10 @@ body {
   width: .7rem;
   margin: 0 0 0 .2rem;
 }
-
+ul li div {
+  argin: .5rem 0 .5rem;
+}
+m
 
 
 /*----------VIDEO-----------*/
@@ -514,10 +518,11 @@ body {
   }
 
   .container div hr {
-    display: block;
+    display: flex;
     height: 1rem;
-    border: .3px solid #686868;
-    color: #686868;
+    width: .1rem;
+    border: none;
+    background-color: #686868;
     margin: 0 1.5rem 0 1rem;
   }
 
