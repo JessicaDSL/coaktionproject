@@ -6,16 +6,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+  <link rel="icon" type="imagem/png" href="/assets/img/logo-title.png" />
   <title>Callwe</title>
 </head>
 
 <body>
-  <div class="header">
+  <header class="header">
+    <nav class="nav" data-js="nav">
+      <ul>
+        <li><img src="./assets/img/logo-header.png" alt=""></li>
+        <li>
+          Cozinha
+        </li>
+        <li>
+          Banheiro
+        </li>
+        <li>
+          Lavanderia
+        </li>
+        <li>
+          Corporativo
+        </li>
+        <li>
+          Válvulas e registros
+        </li>
+      </ul>
+      <hr />
+      <span>Atendimento e suporte</span>
+      <div class="links">
+        <button class="close-menu" data-js="btn-close-menu" onclick="setMenuClose()">X</button>
+      </div>
+    </nav>
     <div class="container">
-      <img class="logo" src="./assets/img/logo-header.png" alt="">
-      <div class="nav" data-js="nav">
+      <img class="logo" data-js="logo" src="./assets/img/logo-header.png" alt="Imagem do logo da empresa" />
+      <div>
         <ul>
-          <li><img src="./assets/img/logo-header.png" alt=""></li>
           <li>
             Cozinha
           </li>
@@ -33,109 +58,113 @@
           </li>
         </ul>
         <hr />
-        <span> Atendimento e suporte</span>
-        <div class="links">
-          <a class="default"><img src="./assets/img/search.png" alt=""></a>
-          <button class="open-menu" onClick="changeImage()"><img class="image" src="./assets/img/menu-header.png"
-              alt=""></button>
-          <button class="close-menu" data-js="btn-close-menu" onclick="handlesStateMenu()">X</button>
-        </div>
+        <span>Atendimento e suporte</span>
       </div>
+      <a><img src="./assets/img/search.png" alt="Imagem do icone de busca"></a>
+      <button class="open-menu" data-js="btn-open-menu" onClick="setMenuOpen()"><img class="image"
+          src="./assets/img/menu-header.png" alt=""></button>
     </div>
-  </div>
+  </header>
 
-  <div class="search">
+  <section class="search-section">
     <div>
       <input type="search" name="" id="">
-      <button type="submit"><img src="./assets/img/search-open.png" alt=""></button>
+      <button type="submit"><img src="./assets/img/search-open.png" alt="Icone para abrir o menu"></button>
     </div>
-  </div>
+  </section>
 
+  <section class="hero-section">
+    <img src="./assets/img/heroimage.png" alt="Banner">
+  </section>
 
-  <div class="hero">
-    <img src="./assets/img/heroimage.png" alt="">
-  </div>
-
-  <div class="menu">
+  <menu class="menu">
     <ul>
-      <li>
-        <img src="./assets/img/menu/produtos.png" alt="" class="menu-image">
+      <li class="item-menu">
+        <img src="./assets/img/menu/produtos.png" alt="Imagem indicando a seção de Produtos" class="menu-image">
         <div>
           <h2>PRODUTOS</h2>
-          <button>ver artigos <img src="./assets/img/arrow-down.png" alt=""></button>
+          <button>ver artigos <img src="./assets/img/arrow-down.png"
+              alt="Imagem da seta indicando para ver os produtos"></button>
         </div>
       </li>
-      <li>
-        <img src="./assets/img/menu/garantia.png" alt="">
+      <li class="item-menu">
+        <img src="./assets/img/menu/garantia.png" alt="Icone informando as garantias">
         <div>
           <h2>GARANTIA</h2>
-          <button>ver artigos <img src="./assets/img/arrow-down.png" alt=""></button>
+          <button>ver artigos <img src="./assets/img/arrow-down.png"
+              alt="Uma seta para saber mais sobre as garantias"></button>
         </div>
       </li>
-      <li>
-        <img src="./assets/img/menu/assatt.png" alt="">
+      <li class="item-menu">
+        <img src="./assets/img/menu/assatt.png" alt="Imagem indicando a assistência técnica">
         <div>
           <h2>ASSISTÊNCIA TÉCNICA AUTORIZADA</h2>
-          <button>ver artigos <img src="./assets/img/arrow-down.png" alt=""></button>
+          <button>ver artigos <img src="./assets/img/arrow-down.png"
+              alt="Seta indicando para ver mais sobre o assunto"></button>
         </div>
       </li>
-      <li>
-        <img src="./assets/img/menu/tecnologias.jpg" alt="">
+      <li class="item-menu">
+        <img src="./assets/img/menu/tecnologias.jpg" alt="Imagem informando que a seção de trata de tecnologias">
         <div>
           <h2>TECNOLOGIAS</h2>
-          <button>ver artigos <img src="./assets/img/arrow-down.png" alt=""></button>
+          <button>ver artigos <img src="./assets/img/arrow-down.png"
+              alt="Seta indicando para ver mais sobre o assunto"></button>
         </div>
       </li>
-      <li>
-        <img src="./assets/img/menu/trabalhe-conosco.png" alt="">
+      <li class="item-menu">
+        <img src="./assets/img/menu/trabalhe-conosco.png" alt="Imagem informando sobre a seção trabalhe conosco">
         <div>
           <h2>TRABALHE CONOSCO</h2>
-          <button>ver artigos <img src="./assets/img/arrow-down.png" alt=""></button>
+          <button>ver artigos <img src="./assets/img/arrow-down.png"
+              alt="Seta indicando para ver mais sobre o assunto"></button>
         </div>
       </li>
-      <li>
-        <img src="./assets/img/menu/projeto.png" alt="">
+      <li class="item-menu">
+        <img src="./assets/img/menu/projeto.png" alt="Imagem informando sobre a seção de projetos">
         <div>
           <h2>PROJETO</h2>
-          <button>ver artigos <img src="./assets/img/arrow-down.png" alt=""></button>
+          <button>ver artigos <img src="./assets/img/arrow-down.png"
+              alt="Seta indicando para ver mais sobre o assunto"></button>
         </div>
       </li>
-      <li>
-        <img src="./assets/img/menu/localizar.png" alt="">
+      <li class="item-menu">
+        <img src="./assets/img/menu/localizar.png" alt="Imagem informando sobre a localização da empresa">
         <div>
           <h2>ONDE ENCONTRAR</h2>
-          <button>ver artigos <img src="./assets/img/arrow-down.png" alt=""></button>
+          <button>ver artigos <img src="./assets/img/arrow-down.png"
+              alt="Seta indicando para ver mais sobre o assunto"></button>
         </div>
       </li>
-      <li>
-        <img src="./assets/img/menu/cadastro.png" alt="">
+      <li class="item-menu">
+        <img src="./assets/img/menu/cadastro.png" alt="Imagem informando sobre a seção de cadastro">
         <div>
           <h2>CADASTRO GARANTIA TODA VIDA</h2>
-          <button>ver artigos <img src="./assets/img/arrow-down.png" alt=""></button>
+          <button>ver artigos <img src="./assets/img/arrow-down.png"
+              alt="Seta indicando para ver mais sobre o assunto"></button>
         </div>
       </li>
     </ul>
-  </div>
+  </menu>
 
-  <div class="videos">
+  <section class="videos-section">
     <h1>Vídeos</h1>
     <div class="carousel">
       <div class="arrow">
-        <img src="./assets/img/arrow-right.png" alt="" />
+        <img src="./assets/img/arrow-right.png" alt="Imagem de uma seta indicando para a direita" />
       </div>
       <ul>
         <li>
-          <img src="./assets/img/video.png" alt="">
+          <img src="./assets/img/video.png" alt="Imagem de um player de música">
         </li>
-        <li class="default">
-          <img src="./assets/img/video.png" alt="">
+        <li>
+          <img src="./assets/img/video.png" alt="Imagem de um player de música">
         </li>
-        <li class="default">
-          <img src="./assets/img/video.png" alt="">
+        <li>
+          <img src="./assets/img/video.png" alt="Imagem de um player de música">
         </li>
       </ul>
       <div class="arrow">
-        <img src="./assets/img/arrow-left.png" alt="">
+        <img src="./assets/img/arrow-left.png" alt="Imagem de uma seta indicando para a esquerda">
       </div>
     </div>
     <div class="balls">
@@ -143,75 +172,76 @@
       <div class="content"></div>
       <div class="content"></div>
     </div>
-  </div>
+  </section>
 
-  <div data-js="cep-info" class="form">
+  <form data-js="cep-info" class="form">
     <h1>Enviar solicitação</h1>
-    <div class="data-form">
-      <div class="flexbox">
-        <label for="name">Nome*</label>
-        <input type="text" id="name" name="name" />
-      </div>
-      <div class="flexbox">
-        <label for="email">Email*</label>
-        <input type="text" id="email" name="email" />
-      </div>
-      <div class="flexbox">
-        <label for="telephone">Telefone</label>
-        <input type="text" id="telephone" name="telephone" />
-      </div>
-      <div class="flexbox">
-        <label for="cep">CEP*</label>
-        <input type="text" id="cep" name="cep" data-js="text" onkeyup="setInputData()" />
-      </div>
-    </div>
-    <div data-js="cep-info" class="adress">
-      <div class="style-form-adress">
-        <div>
+    <div class="data-form" data-js="cep-info">
+      <ul>
+        <li>
+          <label for="name">Nome*</label>
+          <input type="text" id="name" name="name" class="input" />
+        </li>
+        <li>
+          <label for="email">Email*</label>
+          <input type="text" id="email" name="email" />
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <label for="telephone">Telefone</label>
+          <input type="text" id="telephone" name="telephone" />
+        </li>
+        <li>
+          <label for="cep">CEP*</label>
+          <input type="text" id="cep" name="cep" data-js="text" onkeyup="setInputData()" />
+        </li>
+      </ul>
+      <ul class="list-item-adress">
+        <li>
           <label for="adress">Endereço*</label>
           <input type="text" id="street" name="adress" data-js="logradouro" />
-        </div>
-        <div>
+        </li>
+        <li>
           <label for="number">Número*</label>
-        <input type="text" id="number" name="number" />
-        </div>
-      </div>
-      <div class="style-form">
-        <div class="flexbox">
+          <input type="text" id="number" name="number" />
+        </li>
+      </ul>
+      <ul>
+        <li>
           <label for="city">Cidade*</label>
           <input type="text" id="city" name="city" data-js="cidade" />
-        </div>
-        <div class="flexbox">
+        </li>
+        <li>
           <label for="state">Estado</label>
           <input type="text" id="state" name="state" data-js="estado" />
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
     <button type="submit" data-js="button">ENVIE SUA SOLICITAÇÃO</button>
-  </div>
+  </form>
 
-  <div class="footer">
+  <footer class="footer">
     <div class="contact">
-      <img src="./assets/img/logo-footer.png" alt="">
+      <img class="logo-footer" src="./assets/img/logo-footer.png" alt="Logo da empresa">
       <ul class="icons">
         <li>
-          <img src="./assets/img/icon-footer/instagram.png" alt="">
+          <img src="./assets/img/icon-footer/instagram.png" alt="Ícone do instagram">
         </li>
         <li>
-          <img src="./assets/img/icon-footer/facebook.png" alt="">
+          <img src="./assets/img/icon-footer/facebook.png" alt="Ícone do facebook">
         </li>
         <li>
-          <img src="./assets/img/icon-footer/youtube.png" alt="">
+          <img src="./assets/img/icon-footer/youtube.png" alt="Ícone do youtube">
         </li>
         <li>
-          <img src="./assets/img/icon-footer/linkedIn.png" alt="">
+          <img src="./assets/img/icon-footer/linkedIn.png" alt="Ícone do linkedIn">
         </li>
       </ul>
     </div>
     <div class="about">
       <h1>SOBRE A CALLWE</h1>
-      <span><img src="./assets/img/footer/arrow-down.png" alt=""></span>
-      <ul>
+      <ul data-js=about>
         <li>
           Institucional
         </li>
@@ -228,7 +258,6 @@
     </div>
     <div class="products">
       <h1>PRODUTOS</h1>
-      <span><img src="./assets/img/footer/arrow-down.png" alt=""></span>
       <ul>
         <li>
           Banheiro
@@ -249,7 +278,6 @@
     </div>
     <div class="support">
       <h1>SUPORTE</h1>
-      <span><img src="./assets/img/footer/arrow-down.png" alt=""></span>
       <ul>
         <li>
           Política de Qualidade
@@ -272,7 +300,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </footer>
 
 
   <script src="./index.js"></script>
