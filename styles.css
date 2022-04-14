@@ -27,7 +27,6 @@ ul {
 html {
   scroll-behavior: smooth;
 }
-
 body {
   font-family: "Mulish-Regular";
   width: 100%;
@@ -38,11 +37,27 @@ body {
 .header {
   display: flex;
   justify-content: center;
-  margin: 1.6rem 0;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.header hr {
+  background-color: #626366;
+  border: none;
+  width: 1px;
+  height: 1.2rem;
+  margin: 0 3rem 0 1rem;
 }
 
 .container {
+  display: flex;
   width: 70%;
+  justify-content: space-between;
+}
+
+.content {
+  width: 70%;
+  background-color: red;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,41 +70,58 @@ body {
   color: #626366;
 }
 
-.container img {
-  width: 9rem;
-  margin: 0 0 0.5rem 0;
-}
-
-.header hr {
-  background-color: #626366;
-  border: none;
-  width: 1px;
-  height: 1.2rem;
-  margin: 0 3rem 0 1rem;
-}
-
-.header ul {
+.nav ul {
   display: flex;
 }
 
 .nav ul li {
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   letter-spacing: 0.2px;
+  transition: all 0.2s ease-in;
 }
 
-.container a {
+.nav ul li:hover,
+.nav span:hover {
+  cursor: pointer;
+  position: relative;
+  bottom: 3px;
+  color: #00aae2;
+  font-family: "Mulish-bold";
+}
+
+.logo {
+  background-color: aqua;
+  width: 8.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.content a {
   padding: 0 1rem 0 0;
 }
 
-.links a {
-  width: 100%;
+.default img {
+  width: 1.5rem;
+  margin: 0 1rem 0 2rem;
 }
 
-.links a img {
-  width: 35%;
-  padding: 0 0 0 0.3rem;
+.links a img,
+.links button img {
+  /* width: 10%;
+  padding: 0 0 0 0.3rem; */
 }
 
+.links button {
+  background: none;
+  border: none;
+}
+
+.links button img {
+  width: 2rem;
+}
+
+.close-menu {
+  display: none;
+}
 /*--- HERO ---*/
 
 .hero img {
@@ -277,10 +309,39 @@ body {
   margin: 3rem 0;
 }
 
-.gridsize {
+.adress {
+  width: 52%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.adress div {
   display: flex;
 }
 
+.style-form-adress {
+  justify-content: space-between;
+}
+
+.style-form-adress div {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+
+.style-form-adress div:first-child {
+  width: 70%;
+}
+
+.style-form {
+  display: grid;
+  grid-gap: 2.6rem;
+}
+
+.style-form div {
+  width: 50%;
+}
 /*--- FOOTER ---*/
 
 .footer {
@@ -359,13 +420,13 @@ body {
 @media screen and (max-width: 770px) {
   /*--- HEADER ---*/
   .header {
-    display: flex;
+    display: none;
     justify-content: center;
     width: 100%;
   }
   .header ul {
-    display: none;
   }
+
   .header img {
     display: flex;
     width: 3rem;
@@ -377,32 +438,66 @@ body {
     display: none;
   }
 
+  .nav {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+  }
+
+  .nav ul {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: 86%;
+    height: 100vh;
+    border-radius: 0 2px 2px 0;
+  }
+  .nav ul li {
+    padding: 1.4rem 0 1rem 1rem;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .open-menu {
+    display: none;
+  }
+
+  .nav ul li:first-child {
+    width: 100%;
+    padding: 1rem 0 1rem 0.5rem;
+    border-bottom: 1px solid rgba(0, 170, 226, 0.33);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 170, 226, 0.33);
+    box-shadow: 0px 0px 15px 0px rgba(0, 170, 226, 0.33);
+  }
+  .nav ul li img {
+    width: 7rem;
+  }
+
+  .links {
+    height: 100vh;
+  }
+
+  .close-menu {
+    background: #00aae2;
+    color: #ffffff;
+    font-family: Mulish-Bold;
+    border-radius: 2px;
+    margin: 1.2rem 0 0 0.4rem;
+    border: 1px solid #ffffff;
+    padding: 0.5rem;
+  }
+
   .default {
     display: none;
   }
-  .container {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-  }
-  .container img {
-    width: 7rem;
-    margin: 0;
-  }
-  .container a {
-    padding: 0;
-  }
-  .nav {
-    padding: 0;
-  }
-  .links {
-    display: flex;
-  }
-  .links a img {
-    width: 2.3rem;
-  }
   /*--- search ---*/
-
 
   .search {
     height: 3.5rem;
@@ -418,14 +513,14 @@ body {
     background: #ffffff;
     border: 1px solid #00aae2;
     border-radius: 0px 2px 2px 0px;
-    padding: .25rem 1rem;
+    padding: 0.25rem 1rem;
   }
 
   .search input {
     border: 1px solid #00aae2;
     display: flex;
     border-radius: 2px 0px 0px 2px;
-    padding: .6rem;
+    padding: 0.6rem;
     width: 80%;
   }
 
@@ -544,6 +639,9 @@ body {
   .products span,
   .about span,
   .support span {
+    display: none;
+  }
+  .header ul li:first-child {
     display: none;
   }
   .search {
