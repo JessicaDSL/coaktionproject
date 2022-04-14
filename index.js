@@ -23,7 +23,7 @@ function handleCEP() {
 function setInputData() {
   handleCEP(inputText.value);
   let CEP = inputText.value;
-  if (CEP.length === 8) {
+  if (CEP.length === 8 ) {
     let data = getURL(`https://viacep.com.br/ws/${CEP}/json/`);
     let user = JSON.parse(data);
 
@@ -34,4 +34,3 @@ function setInputData() {
 }
 
 inputText.addEventListener("onkeydown", setInputData, false);
-//closeBtn.addEventListener("click", handlesStateMenu, false)
