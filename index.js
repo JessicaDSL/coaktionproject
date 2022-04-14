@@ -6,7 +6,6 @@ const closeBtn = document.querySelector("[data-js=btn-close-menu]");
 const openButton = document.querySelector("[data-js=btn-open-menu]");
 const closeButton = document.querySelector("[data-js=btn-close-menu]");
 const navMenu = document.querySelector("[data-js=nav]");
-const aboutMenu = document.querySelector("[data-js=about]");
 const imageLogo = document.querySelector("[data-js=logo]");
 
 function setMenuOpen() {
@@ -41,14 +40,18 @@ function setInputData() {
   if (CEP.length === 8) {
     const data = getURL(`https://viacep.com.br/ws/${CEP}/json/`);
     const user = JSON.parse(data);
-
-    street.value = `${user.logradouro}, ${user.bairro}`;
-    state.value = user.uf;
-    city.value = user.localidade;
+    if (user.uf === undefined) {
+      street.value = "CEP não encontrado";
+      state.value = "CEP não encontrado";
+      city.value = "CEP não encontrado";
+    } else {
+      street.value = `${user.logradouro}, ${user.bairro}`;
+      state.value = user.uf;
+      city.value = user.localidade;
+    }
   }
 }
 
 inputText.addEventListener("onkeydown", setInputData, false);
 openButton.addEventListener("click", setMenuOpen, false);
 closeButton.addEventListener("click", setMenuClose, false);
-aboutMenu.addEventListener("click", setSectionAboutOpen, false);
