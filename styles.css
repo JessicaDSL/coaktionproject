@@ -32,11 +32,12 @@ body {
   width: 100%;
 }
 
-.menu, .form, .videos, .footer {
-  display: none;
-}
 
-/*-------HEADER--------*/
+
+
+
+/*----------HEADER-----------*/
+
 
 
 .header {
@@ -46,7 +47,7 @@ body {
 }
 
 .nav{
-  display: flex;
+  display: none;
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -74,6 +75,9 @@ body {
 .nav ul li {
   padding: 1rem 1rem;
   letter-spacing: 0.2px;
+  cursor: pointer;
+  font-family: Mulish-Bold;
+  transition: all 2s ease-in;
 }
 
 .container a {
@@ -116,10 +120,12 @@ body {
 }
 
 
-/*--------SEARCH-----------*/
+
+/*----------SEARCH-----------*/
 
 
-.search {
+
+.search-section {
   height: 3.5rem;
   background-color: #00aae2;
   display: flex;
@@ -128,7 +134,7 @@ body {
   margin: 0rem 0;
 }
 
-.search button {
+.search-section button {
   width: 20%;
   background: #ffffff;
   border: 1px solid #00aae2;
@@ -136,7 +142,7 @@ body {
   padding: 0.25rem 1rem;
 }
 
-.search input {
+.search-section input {
   border: 1px solid #00aae2;
   display: flex;
   border-radius: 2px 0px 0px 2px;
@@ -144,26 +150,339 @@ body {
   width: 80%;
 }
 
-.search div {
+.search-section div {
   display: flex;
   width: 90%;
 }
 
-.hero {
+.hero-section {
   display: none;
+}
+
+
+/*-----------MENU-----------*/
+
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.menu ul {
+  width: 96%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #626366;
+}
+
+.menu ul li {
+  height: 14rem;
+  width: 38.5%;
+  padding: 0 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #e2e2e2;
+}
+
+.item-menu h2 {
+  font-size: 0.938rem;
+  font-family: Mulish-Bold;
+}
+
+.item-menu button {
+  font-size: 0.75;
+  font-family: Mulish-Regular;
+  background: none;
+  border: 0;
+}
+
+.item-menu div img {
+  width: .7rem;
+  margin: 0 0 0 .2rem;
+}
+
+
+
+/*----------VIDEO-----------*/
+
+
+
+.videos-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.videos-section h1 {
+  color: #626366;
+  font-size: 1.875rem;
+  margin: 2rem 0 1.2rem 0;
+  font-family: Mulish-Bold;
+}
+
+.arrow img {
+  width: 0.4rem;
+  margin: 0 0.5rem;
+}
+
+.content {
+  display: flex;
+}
+
+.videos-section ul {
+  display: flex;
+  width: 90%;
+}
+
+.videos-section ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8.5rem;
+  border: 1px solid #e2e2e2;
+  margin: 0 0.5rem;
+}
+
+.carousel {
+  margin: 2rem 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.balls {
+  display: flex;
+}
+
+.content {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 1px solid #e2e2e2;
+  margin: 0 0.1rem;
+}
+
+.content:first-child {
+  background-color: #00aae2;
+  border: 1px solid #e2e2e2;
+}
+
+.carousel ul li:nth-child(2), .carousel ul li:nth-child(3) {
+  display: none;
+}
+
+
+/*----------FORM-----------*/
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #626366;
+}
+
+.form div {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 1rem;
+}
+
+.form input {
+  margin: .5rem 0rem 1rem 0;
+  padding: 0rem 0 0 .3rem;
+  height: 2rem;
+  font-family: Mulish-Regular;
+  border: 1px solid #e2e2e2;
+  color: #626366;
+}
+
+.form label {
+  font-family: Mulish-Regular;
+  color: #626366;
+}
+
+.form button {
+  background: none;
+  border: 1.2px solid #00aae2;
+  color: #00aae2;
+  font-size: 0.813rem;
+  font-family: Mulish-Bold;
+  padding: .9rem 2rem;
+  margin: 1rem 0;
+}
+
+.form h1 {
+  color: #626366;
+  font-size: 1.875rem;
+  margin: 4rem 0;
+  font-family: Mulish-Bold;
+}
+
+.form ul li {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*----------FOOTER-----------*/
+
+
+.footer {
+  background-color: #222222;
+  flex-direction: column;
+  margin: 5rem 0 0 0;
+  color: #ffffff;
+}
+
+.footer h1 {
+  font-size: 0.875rem;
+  width: 90%;
+}
+
+.contact {
+  height: 12rem;
+  width: 100%;
+  background-color: #686868;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact ul {
+  width: 50%;
+  margin: 2rem 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about, .products, .support, .attendance {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.about ul li, .products ul li, .support ul li, .attendance ul li {
+  font-size: 0.75rem;
+  padding: .5rem 0;
+}
+
+.logo-footer {
+  width: 50%;
+}
+
+.about {
+  background-color: #686868;
+  
+}
+
+.products {
+  background-color: #565656;
+}
+
+.support {
+  background-color: #383838;
 }
 
 
 
 
-@media screen and (min-width: 1080px) {
+/*----------- MEDIA QUERY ------------*/
+
+@media screen and (min-width: 760px) and (max-width: 1340px) {
+  .menu ul {
+    width: 98%;
+  }
+  
+  .menu ul li {
+    height: 12rem;
+    width: 30%;
+    padding: 0 1rem;
+    margin: .5rem;
+  }
+
+  .videos-section ul {
+    width: 80%;
+  }
+
+  .videos-section ul li{
+    width: 60%;
+  }
+
+  .carousel ul li:nth-child(2), .carousel ul li:nth-child(3) {
+    display: flex;
+  }
+
+  .form div {
+    width: 95%;
+  }
+
+  .form ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .form ul li {
+    width: 40%;
+    margin: 0 1rem;
+  }
+
+  .list-item-adress li:nth-child(1) {
+    width: 60%;
+  }
+
+  .list-item-adress li:nth-child(2) {
+    width: 20%;
+  }
+
+  .footer  {
+    display: flex;
+    flex-direction: row;
+    background-color: #686868;
+  }
+  
+
+  .contact {
+    width: 24%;
+    height: auto;
+  }
+
+  .contact, .about {
+    background-color: #222222;
+  }
+
+  .products {
+    background-color: #383838
+  }
+
+  .support {
+    background-color: #565656
+  }
+}
+
+
+@media screen and (min-width: 1340px) {
   .nav div a {
     display: none;
   }
   .menu-nav {
     width: 100%;
   }
-  .search {
+  .search-section {
     display: none;
   }
   .close-menu {
@@ -216,6 +535,18 @@ body {
     font-size: 0.875rem;
   }
 
+  .container div ul li:hover{
+    cursor: pointer;
+    font-family: Mulish-Bold;
+    color: #00aae2;
+  }
+
+  .container span:hover{
+    cursor: pointer;
+    font-family: Mulish-Bold;
+    color: #00aae2;
+  }
+
   .container span {
     display: flex;
     font-size: .6rem;
@@ -231,16 +562,121 @@ body {
     margin: 0 0 0 .7rem;
   }
 
-  
-
   /*--------HERO-----------*/
 
-  .hero {
+  .hero-section {
     display: flex;
   }
 
-  .hero img {
+  .hero-section img {
     width: 100%;
   }
-}
 
+  /*----------MENU-----------*/
+  .menu ul {
+    width: 82%;
+  }
+  
+  .menu ul li {
+    height: 14rem;
+    width: 20%;
+    padding: 0 1rem;
+    margin: .5rem;
+  }
+
+  /*----------VIDEOS-----------*/
+
+  .videos-section ul {
+    display: flex;
+    width: 50%;
+  }
+
+  .carousel ul li:nth-child(2), .carousel ul li:nth-child(3) {
+    display: flex;
+  }
+
+  /*----------FORM----------*/
+
+  
+  .form div {
+    width: 72%;
+  }
+
+  .form ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .form ul li {
+    width: 40%;
+    margin: 0 1rem;
+  }
+
+  .form input {
+    padding: 1rem .5rem;
+  }
+
+  .form button {
+    font-size: 0.813rem;
+    padding: 1.3rem 3rem;
+    border: 2px solid #00aae2;
+  }
+
+  .list-item-adress li:nth-child(1) {
+    width: 60%;
+  }
+
+  .list-item-adress li:nth-child(2) {
+    width: 20%;
+  }
+
+
+/*----------FOOTER----------*/
+
+
+  .footer  {
+    display: flex;
+    flex-direction: row;
+    background-color: #686868;
+  }
+  
+  .footer ul {
+    margin: 0 0 2rem 0;
+  }
+
+
+  .contact {
+    width: 30%;
+    height: auto;
+  }
+
+  .contact, .about {
+    background-color: #222222;
+  }
+
+  .products {
+    background-color: #383838
+  }
+
+  .support {
+    background-color: #565656
+  }
+
+  .footer h1 {
+    font-size: 0.875rem;
+    width: 100%;
+    padding: 3rem 0 .4rem 0;
+  }
+
+  .logo-footer {
+    width: 25%;
+    margin: 0 0 0 4rem;
+  }
+
+  .contact ul {
+    width: 25%;
+    padding: 2.5rem 0 0 0;
+    margin: 0 0 0 4rem;
+  }
+}
