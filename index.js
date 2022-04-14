@@ -2,19 +2,34 @@ const inputText = document.querySelector('[data-js="text"]');
 const street = document.querySelector('[data-js="logradouro"]');
 const city = document.querySelector('[data-js="cidade"]');
 const state = document.querySelector('[data-js="estado"]');
-const closeBtn = document.querySelector("[btn-close-menu]");
+const closeBtn = document.querySelector("[data-js=btn-close-menu]");
+const openButton = document.querySelector("[data-js=btn-open-menu]");
+const closeButton = document.querySelector("[data-js=btn-close-menu]");
+const navMenu = document.querySelector("[data-js=nav]");
+const aboutMenu = document.querySelector("[data-js=about]");
+const imageLogo = document.querySelector("[data-js=logo]");
+
+function setMenuOpen() {
+  navMenu.style.display = "flex";
+  imageLogo.style.display = "none";
+}
+
+function setMenuClose() {
+  navMenu.style.display = "none";
+  imageLogo.style.display = "flex";
+}
 
 function getURL(url) {
-  let request = new XMLHttpRequest();
+  const request = new XMLHttpRequest();
   request.open("GET", url, false);
   request.send();
   return request.responseText;
 }
 
 function handleCEP() {
-  let cepValue = inputText.value;
-  let reg = /\D+$/g;
-  let confirm = cepValue.match(reg);
+  const cepValue = inputText.value;
+  const reg = /\D+$/g;
+  const confirm = cepValue.match(reg);
   if (confirm) {
     inputText.value = "";
   }
@@ -22,10 +37,10 @@ function handleCEP() {
 
 function setInputData() {
   handleCEP(inputText.value);
-  let CEP = inputText.value;
-  if (CEP.length === 8 ) {
-    let data = getURL(`https://viacep.com.br/ws/${CEP}/json/`);
-    let user = JSON.parse(data);
+  const CEP = inputText.value;
+  if (CEP.length === 8) {
+    const data = getURL(`https://viacep.com.br/ws/${CEP}/json/`);
+    const user = JSON.parse(data);
 
     street.value = `${user.logradouro}, ${user.bairro}`;
     state.value = user.uf;
@@ -34,3 +49,6 @@ function setInputData() {
 }
 
 inputText.addEventListener("onkeydown", setInputData, false);
+openButton.addEventListener("click", setMenuOpen, false);
+closeButton.addEventListener("click", setMenuClose, false);
+aboutMenu.addEventListener("click", setSectionAboutOpen, false);
